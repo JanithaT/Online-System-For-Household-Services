@@ -1,0 +1,683 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXTimePicker?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="835.0" prefWidth="1300.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Workers_Controller">
+   <children>
+      <AnchorPane prefHeight="190.0" prefWidth="1200.0" style="-fx-background-color: #ff8383;">
+         <children>
+            <ImageView fitHeight="130.0" fitWidth="1300.0" pickOnBounds="true">
+               <image>
+                  <Image url="@images/3259.jpg" />
+               </image>
+            </ImageView>
+            <JFXButton fx:id="btnLogout" alignment="CENTER_RIGHT" buttonType="RAISED" layoutX="1112.0" layoutY="131.0" onAction="#actLogout" prefHeight="50.0" prefWidth="174.0" text="LOGOUT" textFill="WHITE">
+               <font>
+                  <Font name="Copperplate Gothic Bold" size="21.0" />
+               </font>
+               <ripplerFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="#ff8080" />
+                        <Stop color="#ff8080" offset="0.007246376811594203" />
+                        <Stop color="#a0abeb" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </ripplerFill>
+            </JFXButton>
+            <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="1112.0" layoutY="133.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/logout.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="wellbl" alignment="CENTER" layoutX="456.0" layoutY="132.0" prefHeight="50.0" prefWidth="384.0" style="-fx-background-color: transparent;" text="Welcome" textFill="#fff8f8">
+               <font>
+                  <Font name="Book Antiqua Bold" size="40.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutY="190.0" prefHeight="620.0" prefWidth="1200.0">
+         <children>
+            <AnchorPane fx:id="ancAllWorkers" layoutX="325.0" prefHeight="645.0" prefWidth="975.0" style="-fx-background-color: white;">
+               <children>
+                  <ImageView fitHeight="144.0" fitWidth="203.0" layoutX="118.0" layoutY="117.0" pickOnBounds="true">
+                     <image>
+                        <Image url="@images/cleaner.jpg" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="144.0" fitWidth="199.0" layoutX="120.0" layoutY="384.0" pickOnBounds="true">
+                     <image>
+                        <Image url="@images/carpenterr.jpg" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="144.0" fitWidth="199.0" layoutX="657.0" layoutY="117.0" pickOnBounds="true">
+                     <image>
+                        <Image url="@images/plumber.jpg" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="144.0" fitWidth="199.0" layoutX="389.0" layoutY="382.0" pickOnBounds="true" smooth="false">
+                     <image>
+                        <Image url="@images/Painters.jpg" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="144.0" fitWidth="199.0" layoutX="389.0" layoutY="117.0" pickOnBounds="true">
+                     <image>
+                        <Image url="@images/electricians.jpg" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="144.0" fitWidth="199.0" layoutX="657.0" layoutY="382.0" pickOnBounds="true">
+                     <image>
+                        <Image url="@images/two-repairmen-fixing-washing-machine-handymen-mentor-intern-with-tools-flat-illustration_74855-11161.jpg" />
+                     </image>
+                  </ImageView>
+                  <JFXButton fx:id="btnCleaners" buttonType="RAISED" layoutX="120.0" layoutY="276.0" onAction="#viewCleaners" prefHeight="50.0" prefWidth="203.0" style="-fx-background-color: #2d9393;" text="Cleaners" textFill="WHITE">
+                     <font>
+                        <Font name="Gill Sans Ultra Bold" size="22.0" />
+                     </font>
+                     <ripplerFill>
+                        <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                           <stops>
+                              <Stop color="#46e8ad" />
+                              <Stop color="#217480" offset="1.0" />
+                           </stops>
+                        </RadialGradient>
+                     </ripplerFill>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+                  <JFXButton fx:id="btnCarpenters" buttonType="RAISED" layoutX="118.0" layoutY="542.0" onAction="#viewCarpenters" prefHeight="50.0" prefWidth="203.0" style="-fx-background-color: #2d9393;" text="Carpenters" textFill="WHITE">
+                     <font>
+                        <Font name="Gill Sans Ultra Bold" size="22.0" />
+                     </font>
+                     <ripplerFill>
+                        <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                           <stops>
+                              <Stop color="#46e8ad" />
+                              <Stop color="#217480" offset="1.0" />
+                           </stops>
+                        </RadialGradient>
+                     </ripplerFill>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+                  <JFXButton fx:id="btnElectricians" buttonType="RAISED" layoutX="389.0" layoutY="276.0" onAction="#viewElectricians" prefHeight="50.0" prefWidth="203.0" style="-fx-background-color: #2d9393;" text="Electricians" textFill="WHITE">
+                     <font>
+                        <Font name="Gill Sans Ultra Bold" size="22.0" />
+                     </font>
+                     <ripplerFill>
+                        <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                           <stops>
+                              <Stop color="#46e8ad" />
+                              <Stop color="#217480" offset="1.0" />
+                           </stops>
+                        </RadialGradient>
+                     </ripplerFill>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+                  <JFXButton fx:id="btnPlumbers" buttonType="RAISED" layoutX="655.0" layoutY="276.0" onAction="#viewPlumbers" prefHeight="50.0" prefWidth="203.0" style="-fx-background-color: #2d9393;" text="Plumbers" textFill="WHITE">
+                     <font>
+                        <Font name="Gill Sans Ultra Bold" size="22.0" />
+                     </font>
+                     <ripplerFill>
+                        <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                           <stops>
+                              <Stop color="#46e8ad" />
+                              <Stop color="#217480" offset="1.0" />
+                           </stops>
+                        </RadialGradient>
+                     </ripplerFill>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+                  <JFXButton fx:id="btnMechanics" buttonType="RAISED" layoutX="655.0" layoutY="542.0" onAction="#viewMechanics" prefHeight="50.0" prefWidth="203.0" style="-fx-background-color: #2d9393;" text="Mechanic" textFill="WHITE">
+                     <font>
+                        <Font name="Gill Sans Ultra Bold" size="22.0" />
+                     </font>
+                     <ripplerFill>
+                        <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                           <stops>
+                              <Stop color="#46e8ad" />
+                              <Stop color="#217480" offset="1.0" />
+                           </stops>
+                        </RadialGradient>
+                     </ripplerFill>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+                  <JFXButton fx:id="btnPainters" buttonType="RAISED" layoutX="389.0" layoutY="542.0" onAction="#viewPainters" prefHeight="50.0" prefWidth="203.0" style="-fx-background-color: #2d9393;" text="Painters" textFill="WHITE">
+                     <font>
+                        <Font name="Gill Sans Ultra Bold" size="22.0" />
+                     </font>
+                     <ripplerFill>
+                        <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                           <stops>
+                              <Stop color="#46e8ad" />
+                              <Stop color="#217480" offset="1.0" />
+                           </stops>
+                        </RadialGradient>
+                     </ripplerFill>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+               </children>
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+            </AnchorPane>
+            <AnchorPane fx:id="ancWorkerRoll" layoutX="325.0" prefHeight="645.0" prefWidth="975.0" style="-fx-background-color: #d2e9ee;" visible="false">
+               <children>
+                  <TableView fx:id="tabWorkers" layoutX="14.0" layoutY="115.0" onMouseClicked="#clickRow" prefHeight="350.0" prefWidth="655.0" stylesheets="@table.css">
+                    <columns>
+                        <TableColumn fx:id="colWorkerId" prefWidth="89.0" text="WorkerID" />
+                      <TableColumn fx:id="colFirstName" minWidth="0.0" prefWidth="140.0" text="FirstName" />
+                        <TableColumn fx:id="colLastName" prefWidth="143.0" text="LastName" />
+                        <TableColumn fx:id="colMobileno" prefWidth="137.0" text="MobileNo" />
+                        <TableColumn fx:id="colHomeno" prefWidth="144.0" text="HomeNo" />
+                    </columns>
+                     <cursor>
+                        <Cursor fx:constant="OPEN_HAND" />
+                     </cursor>
+                  </TableView>
+                  <JFXButton fx:id="btnBackToWorkerRolls" buttonType="RAISED" layoutX="18.0" layoutY="21.0" onAction="#actBackToWorkerRolls" prefHeight="58.0" prefWidth="100.0" style="-fx-background-color: #1883a1; -fx-background-radius: 5px;" text="Back" textFill="WHITE">
+                     <font>
+                        <Font name="Pristina" size="25.0" />
+                     </font>
+                     <ripplerFill>
+                        <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                           <stops>
+                              <Stop color="#46e5eb" />
+                              <Stop color="#46e5eb" offset="0.007246376811594203" />
+                              <Stop color="#215a80" offset="1.0" />
+                           </stops>
+                        </RadialGradient>
+                     </ripplerFill>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+                  <AnchorPane fx:id="ancAdminEdit" layoutX="22.0" layoutY="483.0" prefHeight="130.0" prefWidth="573.0" visible="false">
+                     <children>
+                        <JFXButton fx:id="btnUpdateWorker" alignment="CENTER_RIGHT" buttonType="RAISED" layoutX="82.0" layoutY="34.0" onAction="#actUpdateWorker" prefHeight="65.0" prefWidth="174.0" style="-fx-background-color: white; -fx-background-radius: 5px;" text="UPDATE" textFill="#ed9918">
+                           <font>
+                              <Font name="Trebuchet MS Bold" size="23.0" />
+                           </font>
+                           <ripplerFill>
+                              <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                                 <stops>
+                                    <Stop color="#ebcb46" />
+                                    <Stop color="#822121" offset="1.0" />
+                                 </stops>
+                              </RadialGradient>
+                           </ripplerFill>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </JFXButton>
+                        <JFXButton fx:id="btnDeleteWorker" alignment="CENTER_RIGHT" buttonType="RAISED" layoutX="324.0" layoutY="34.0" onAction="#actDeleteWorker" prefHeight="65.0" prefWidth="174.0" style="-fx-background-color: white; -fx-background-radius: 5px;" text="DELETE" textFill="#8a53dd">
+                           <font>
+                              <Font name="Trebuchet MS Bold" size="23.0" />
+                           </font>
+                           <ripplerFill>
+                              <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                                 <stops>
+                                    <Stop color="#46bceb" />
+                                    <Stop color="#5a2180" offset="1.0" />
+                                 </stops>
+                              </RadialGradient>
+                           </ripplerFill>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </JFXButton>
+                        <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="338.0" layoutY="42.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/Gif_Delete.gif" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="91.0" layoutY="44.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/Gif_edit.gif" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="ancHouseownerEdit" layoutX="43.0" layoutY="481.0" prefHeight="132.0" prefWidth="785.0" visible="false">
+                     <children>
+                        <JFXButton fx:id="btnReserveWorker" alignment="CENTER_RIGHT" buttonType="RAISED" disable="true" layoutX="330.0" layoutY="40.0" onAction="#actReserveWorker" prefHeight="65.0" prefWidth="174.0" style="-fx-background-color: white; -fx-background-radius: 5px;" text="RESERVE" textFill="#190cab">
+                           <font>
+                              <Font name="Trebuchet MS Bold" size="23.0" />
+                           </font>
+                           <ripplerFill>
+                              <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                                 <stops>
+                                    <Stop color="#46d7eb" />
+                                    <Stop color="#46d7eb" offset="0.007246376811594203" />
+                                    <Stop color="#362180" offset="1.0" />
+                                 </stops>
+                              </RadialGradient>
+                           </ripplerFill>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </JFXButton>
+                        <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="336.0" layoutY="48.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/Gif_Book.gif" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="ancAdminEdit2" layoutX="681.0" layoutY="56.0" prefHeight="533.0" prefWidth="270.0">
+                     <children>
+                        <JFXTextField fx:id="txtWorkerId" editable="false" layoutX="15.0" layoutY="53.0" prefHeight="43.0" prefWidth="214.0" promptText="WorkerID">
+                           <font>
+                              <Font name="Candara" size="21.0" />
+                           </font>
+                        </JFXTextField>
+                        <JFXTextField fx:id="txtFirstname" editable="false" layoutX="15.0" layoutY="130.0" prefHeight="43.0" prefWidth="214.0" promptText="FirstName">
+                           <font>
+                              <Font name="Candara" size="21.0" />
+                           </font>
+                        </JFXTextField>
+                        <JFXTextField fx:id="txtLastname" editable="false" layoutX="16.0" layoutY="206.0" prefHeight="43.0" prefWidth="214.0" promptText="LastName">
+                           <font>
+                              <Font name="Candara" size="21.0" />
+                           </font>
+                        </JFXTextField>
+                        <JFXTextField fx:id="txtMobileno" editable="false" layoutX="16.0" layoutY="284.0" prefHeight="43.0" prefWidth="214.0" promptText="MobileNo">
+                           <font>
+                              <Font name="Candara" size="21.0" />
+                           </font>
+                        </JFXTextField>
+                        <JFXTextField fx:id="txtHomeno" editable="false" layoutX="17.0" layoutY="357.0" prefHeight="43.0" prefWidth="214.0" promptText="HomeNo">
+                           <font>
+                              <Font name="Candara" size="21.0" />
+                           </font>
+                        </JFXTextField>
+                        <JFXComboBox fx:id="cmbWorkerroll" layoutX="17.0" layoutY="436.0" prefHeight="43.0" prefWidth="214.0" promptText="WorkerRoll" visible="false" />
+                     </children>
+                  </AnchorPane>
+                  <Label fx:id="lblWorkerroll" alignment="CENTER" contentDisplay="CENTER" layoutX="177.0" layoutY="16.0" prefHeight="69.0" prefWidth="517.0" textFill="#0b5057" underline="true">
+                     <font>
+                        <Font name="Pristina" size="43.0" />
+                     </font></Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="ancSidebar" prefHeight="645.0" prefWidth="325.0" style="-fx-background-color: #ffe8e8;">
+               <children>
+                  <Label layoutX="109.0" layoutY="14.0" text="MENU">
+                     <font>
+                        <Font name="System Bold" size="25.0" />
+                     </font>
+                     <textFill>
+                        <LinearGradient endX="1.0" endY="1.0">
+                           <stops>
+                              <Stop color="#d30808" />
+                              <Stop color="#2007dd" offset="1.0" />
+                           </stops>
+                        </LinearGradient>
+                     </textFill>
+                  </Label>
+                  <AnchorPane fx:id="ancAdminSidebar" layoutX="7.0" layoutY="71.0" prefHeight="556.0" prefWidth="313.0" visible="false">
+                     <children>
+                        <JFXButton fx:id="btnDashboard" buttonType="RAISED" layoutX="73.0" layoutY="30.0" onAction="#actmenuDashboard_admin" prefHeight="50.0" prefWidth="225.0" style="-fx-background-color: #e76666; -fx-background-radius: 5px;" text="Dashboard" textFill="WHITE">
+                           <font>
+                              <Font name="Trebuchet MS" size="27.0" />
+                           </font>
+                           <ripplerFill>
+                              <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                                 <stops>
+                                    <Stop color="#eb7445" />
+                                    <Stop color="#822121" offset="1.0" />
+                                 </stops>
+                              </RadialGradient>
+                           </ripplerFill>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </JFXButton>
+                        <ImageView fitHeight="60.0" fitWidth="60.0" layoutX="13.0" layoutY="102.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/reg1.png" />
+                           </image>
+                        </ImageView>
+                        <JFXButton fx:id="btnAddWorkers" buttonType="RAISED" layoutX="73.0" layoutY="107.0" onAction="#workadd" prefHeight="50.0" prefWidth="225.0" style="-fx-background-color: #e76666; -fx-background-radius: 5px;" text="Add Workers" textFill="WHITE">
+                           <font>
+                              <Font name="Trebuchet MS" size="27.0" />
+                           </font>
+                           <ripplerFill>
+                              <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                                 <stops>
+                                    <Stop color="#eb7445" />
+                                    <Stop color="#822121" offset="1.0" />
+                                 </stops>
+                              </RadialGradient>
+                           </ripplerFill>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </JFXButton>
+                        <ImageView fitHeight="60.0" fitWidth="60.0" layoutX="13.0" layoutY="181.0" pickOnBounds="true" smooth="false">
+                           <image>
+                              <Image url="@images/icons8-crowd-100.png" />
+                           </image>
+                        </ImageView>
+                        <JFXButton fx:id="btnViewWorkers" buttonType="RAISED" layoutX="73.0" layoutY="181.0" onAction="#viewWorkers" prefHeight="50.0" prefWidth="225.0" style="-fx-background-color: #e76666; -fx-background-radius: 5px;" text="View Workers" textFill="WHITE">
+                           <font>
+                              <Font name="Trebuchet MS" size="27.0" />
+                           </font>
+                           <ripplerFill>
+                              <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                                 <stops>
+                                    <Stop color="#eb7445" />
+                                    <Stop color="#822121" offset="1.0" />
+                                 </stops>
+                              </RadialGradient>
+                           </ripplerFill>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </JFXButton>
+                        <ImageView fitHeight="60.0" fitWidth="60.0" layoutX="13.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/icons8-speed-100.png" />
+                           </image>
+                        </ImageView>
+                        <JFXButton fx:id="btnMenuChangePw_admin" buttonType="RAISED" layoutX="73.0" layoutY="323.0" onAction="#actMenuChangePw_admin" prefHeight="50.0" prefWidth="227.0" style="-fx-background-color: #e76666; -fx-background-radius: 5px;" text="Change Password" textFill="WHITE">
+                           <font>
+                              <Font name="Trebuchet MS" size="25.0" />
+                           </font>
+                           <ripplerFill>
+                              <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                                 <stops>
+                                    <Stop color="#eb7445" />
+                                    <Stop color="#822121" offset="1.0" />
+                                 </stops>
+                              </RadialGradient>
+                           </ripplerFill>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </JFXButton>
+                        <ImageView fitHeight="60.0" fitWidth="60.0" layoutX="13.0" layoutY="318.0" pickOnBounds="true" smooth="false">
+                           <image>
+                              <Image url="@images/icons8-lock-100.png" />
+                           </image>
+                        </ImageView>
+                        <JFXButton fx:id="btnMenuHouseOwners_admin" buttonType="RAISED" layoutX="73.0" layoutY="253.0" onAction="#actMenuHouseOwners_admin" prefHeight="50.0" prefWidth="227.0" style="-fx-background-color: #e76666; -fx-background-radius: 5px;" text="House Owners" textFill="WHITE">
+                           <font>
+                              <Font name="Trebuchet MS" size="27.0" />
+                           </font>
+                           <ripplerFill>
+                              <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                                 <stops>
+                                    <Stop color="#eb7445" />
+                                    <Stop color="#822121" offset="1.0" />
+                                 </stops>
+                              </RadialGradient>
+                           </ripplerFill>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </JFXButton>
+                        <ImageView fitHeight="60.0" fitWidth="60.0" layoutX="13.0" layoutY="248.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/icons8-home-page-100.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="ancHouseownerSidebar" layoutX="7.0" layoutY="71.0" prefHeight="556.0" prefWidth="313.0" visible="false">
+                     <children>
+                        <JFXButton fx:id="btnViewWorkers_HO" buttonType="RAISED" layoutX="72.0" layoutY="120.0" onAction="#viewWorkers" prefHeight="50.0" prefWidth="225.0" style="-fx-background-color: #e76666; -fx-background-radius: 5px;" text="View Workers" textFill="WHITE">
+                           <font>
+                              <Font name="Trebuchet MS" size="25.0" />
+                           </font>
+                           <ripplerFill>
+                              <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                                 <stops>
+                                    <Stop color="#eb7445" />
+                                    <Stop color="#822121" offset="1.0" />
+                                 </stops>
+                              </RadialGradient>
+                           </ripplerFill>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </JFXButton>
+                        <ImageView fitHeight="60.0" fitWidth="60.0" layoutX="12.0" layoutY="115.0" pickOnBounds="true" smooth="false">
+                           <image>
+                              <Image url="@images/icons8-crowd-100.png" />
+                           </image>
+                        </ImageView>
+                        <JFXButton fx:id="btnMenuHome_HO" buttonType="RAISED" layoutX="72.0" layoutY="40.0" onAction="#actMenuHome_HO" prefHeight="48.0" prefWidth="225.0" style="-fx-background-color: #e76666; -fx-background-radius: 5px;" text="Home" textFill="WHITE">
+                           <font>
+                              <Font name="Trebuchet MS" size="25.0" />
+                           </font>
+                           <ripplerFill>
+                              <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                                 <stops>
+                                    <Stop color="#eb7445" />
+                                    <Stop color="#822121" offset="1.0" />
+                                 </stops>
+                              </RadialGradient>
+                           </ripplerFill>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </JFXButton>
+                        <ImageView fitHeight="60.0" fitWidth="60.0" layoutX="12.0" layoutY="34.0" pickOnBounds="true" smooth="false">
+                           <image>
+                              <Image url="@images/icons8-home-page-100.png" />
+                           </image>
+                        </ImageView>
+                        <JFXButton fx:id="btnMenuMyReservation_HO" buttonType="RAISED" layoutX="72.0" layoutY="198.0" onAction="#actMenuMyReservation_HO" prefHeight="50.0" prefWidth="225.0" style="-fx-background-color: #e76666; -fx-background-radius: 5px;" text="My Reservation" textFill="WHITE">
+                           <font>
+                              <Font name="Trebuchet MS" size="25.0" />
+                           </font>
+                           <ripplerFill>
+                              <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                                 <stops>
+                                    <Stop color="#eb7445" />
+                                    <Stop color="#822121" offset="1.0" />
+                                 </stops>
+                              </RadialGradient>
+                           </ripplerFill>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </JFXButton>
+                        <ImageView fitHeight="60.0" fitWidth="60.0" layoutX="12.0" layoutY="193.0" pickOnBounds="true" smooth="false">
+                           <image>
+                              <Image url="@images/icons8-repository-100.png" />
+                           </image>
+                        </ImageView>
+                        <JFXButton fx:id="btnMenuMyProfile_HO" buttonType="RAISED" layoutX="72.0" layoutY="277.0" onAction="#actMenuMyProfile_HO" prefHeight="50.0" prefWidth="225.0" style="-fx-background-color: #e76666; -fx-background-radius: 5px;" text="My Profile" textFill="WHITE">
+                           <font>
+                              <Font name="Trebuchet MS" size="25.0" />
+                           </font>
+                           <ripplerFill>
+                              <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                                 <stops>
+                                    <Stop color="#eb7445" />
+                                    <Stop color="#822121" offset="1.0" />
+                                 </stops>
+                              </RadialGradient>
+                           </ripplerFill>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </JFXButton>
+                        <ImageView fitHeight="60.0" fitWidth="60.0" layoutX="12.0" layoutY="272.0" pickOnBounds="true" smooth="false">
+                           <image>
+                              <Image url="@images/icons8-user-100.png" />
+                           </image>
+                        </ImageView>
+                        <JFXButton fx:id="btnMenuChangePw_HO" buttonType="RAISED" layoutX="72.0" layoutY="351.0" onAction="#actMenuChangePw_HO" prefHeight="50.0" prefWidth="227.0" style="-fx-background-color: #e76666; -fx-background-radius: 5px;" text="Change Password" textFill="WHITE">
+                           <font>
+                              <Font name="Trebuchet MS" size="25.0" />
+                           </font>
+                           <ripplerFill>
+                              <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                                 <stops>
+                                    <Stop color="#eb7445" />
+                                    <Stop color="#822121" offset="1.0" />
+                                 </stops>
+                              </RadialGradient>
+                           </ripplerFill>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </JFXButton>
+                        <ImageView fitHeight="60.0" fitWidth="60.0" layoutX="12.0" layoutY="346.0" pickOnBounds="true" smooth="false">
+                           <image>
+                              <Image url="@images/icons8-lock-100.png" />
+                           </image>
+                        </ImageView>
+                        <JFXButton fx:id="btnMenuFeedback_Ho" buttonType="RAISED" layoutX="75.0" layoutY="421.0" onAction="#actMenuFeedback_Ho" prefHeight="50.0" prefWidth="227.0" style="-fx-background-color: #e76666; -fx-background-radius: 5px;" text="Feedback" textFill="WHITE">
+                           <font>
+                              <Font name="Trebuchet MS" size="25.0" />
+                           </font>
+                           <ripplerFill>
+                              <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                                 <stops>
+                                    <Stop color="#eb7445" />
+                                    <Stop color="#822121" offset="1.0" />
+                                 </stops>
+                              </RadialGradient>
+                           </ripplerFill>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </JFXButton>
+                        <ImageView fitHeight="60.0" fitWidth="60.0" layoutX="12.0" layoutY="416.0" pickOnBounds="true" smooth="false">
+                           <image>
+                              <Image url="@images/icons8-wechat-100.png" />
+                           </image>
+                        </ImageView>
+                     </children></AnchorPane>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="ancReservation" layoutX="325.0" prefHeight="645.0" prefWidth="975.0" style="-fx-background-color: #d2e9ee;" visible="false">
+               <children>
+                  <Label fx:id="lblReservationTitle" alignment="CENTER" layoutX="223.0" layoutY="14.0" prefHeight="76.0" prefWidth="529.0" text="Reservation" textFill="#0b6d7c" underline="true">
+                     <font>
+                        <Font name="Rage Italic" size="49.0" />
+                     </font>
+                  </Label>
+                  <JFXButton fx:id="btnReserveSubmit" buttonType="RAISED" layoutX="172.0" layoutY="534.0" onAction="#actReserveSubmit" prefHeight="59.0" prefWidth="261.0" style="-fx-background-color: #e76666; -fx-background-radius: 5px;" text="Reserve" textFill="WHITE">
+                     <font>
+                        <Font name="Trebuchet MS" size="28.0" />
+                     </font>
+                     <ripplerFill>
+                        <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                           <stops>
+                              <Stop color="#eb7445" />
+                              <Stop color="#822121" offset="1.0" />
+                           </stops>
+                        </RadialGradient>
+                     </ripplerFill>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+                  <JFXTextField fx:id="txtWorkerName" editable="false" focusColor="#009688" layoutX="330.0" layoutY="194.0" prefHeight="48.0" prefWidth="543.0" promptText="Selected Worker Name Here" unFocusColor="#02433a">
+                     <font>
+                        <Font size="16.0" />
+                     </font></JFXTextField>
+                  <JFXTextField fx:id="txtHouseowner" editable="false" focusColor="#009688" layoutX="330.0" layoutY="117.0" prefHeight="48.0" prefWidth="543.0" promptText="House Owner Name Here" unFocusColor="#02433a">
+                     <font>
+                        <Font size="16.0" />
+                     </font></JFXTextField>
+                  <JFXButton fx:id="btnReserveClear" buttonType="RAISED" layoutX="518.0" layoutY="534.0" onAction="#actReserveClear" prefHeight="59.0" prefWidth="261.0" style="-fx-background-color: #009688; -fx-background-radius: 5px;" text="Clear" textFill="WHITE">
+                     <font>
+                        <Font name="Trebuchet MS" size="28.0" />
+                     </font>
+                     <ripplerFill>
+                        <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                           <stops>
+                              <Stop color="#46ebbd" />
+                              <Stop color="#218078" offset="1.0" />
+                           </stops>
+                        </RadialGradient>
+                     </ripplerFill>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+                  <JFXButton fx:id="btnReserveBack" buttonType="RAISED" layoutX="27.0" layoutY="23.0" onAction="#actReserveBack" prefHeight="14.0" prefWidth="99.0" style="-fx-background-color: #1883a1; -fx-background-radius: 5px;" text="Back" textFill="WHITE">
+                     <font>
+                        <Font name="Pristina" size="25.0" />
+                     </font>
+                     <ripplerFill>
+                        <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                           <stops>
+                              <Stop color="#46e5eb" />
+                              <Stop color="#46e5eb" offset="0.007246376811594203" />
+                              <Stop color="#215a80" offset="1.0" />
+                           </stops>
+                        </RadialGradient>
+                     </ripplerFill>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+                  <JFXDatePicker fx:id="txtReserveDate" layoutX="330.0" layoutY="276.0" prefHeight="48.0" prefWidth="543.0" promptText="Select Reservation Date" />
+                  <JFXTimePicker fx:id="txtReserveStartTime" layoutX="330.0" layoutY="353.0" prefHeight="48.0" prefWidth="261.0" promptText="Reservation Time Peroid (START)" />
+                  <JFXTextArea fx:id="txtReserveDetails" focusColor="#009688" layoutX="330.0" layoutY="436.0" prefHeight="65.0" prefWidth="543.0" promptText="Enter Reservation Details" unFocusColor="#02433a" />
+                  <JFXTimePicker fx:id="txtReserveEndTime" layoutX="614.0" layoutY="352.0" prefHeight="48.0" prefWidth="261.0" promptText="Reservation Time Peroid (END)" />
+                  <Label layoutX="77.0" layoutY="119.0" prefHeight="43.0" prefWidth="199.0" text="House Owner Name:">
+                     <font>
+                        <Font name="Candara Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="77.0" layoutY="278.0" prefHeight="43.0" prefWidth="199.0" text="Reservation Date :">
+                     <font>
+                        <Font name="Candara Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="77.0" layoutY="355.0" prefHeight="43.0" prefWidth="225.0" text="Reservation Time Period :">
+                     <font>
+                        <Font name="Candara Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="77.0" layoutY="436.0" prefHeight="43.0" prefWidth="199.0" text="Reservation Details :">
+                     <font>
+                        <Font name="Candara Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="77.0" layoutY="196.0" prefHeight="43.0" prefWidth="199.0" text="Worker Name :">
+                     <font>
+                        <Font name="Candara Bold" size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

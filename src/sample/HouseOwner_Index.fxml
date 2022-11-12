@@ -1,0 +1,541 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="841.0" prefWidth="1300.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.HouseOwner_Index_Controller">
+   <children>
+      <AnchorPane prefHeight="190.0" prefWidth="1200.0" style="-fx-background-color: #ff8383;">
+         <children>
+            <ImageView fitHeight="130.0" fitWidth="1300.0" pickOnBounds="true">
+               <image>
+                  <Image url="@images/3259.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="1087.0" layoutY="131.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/logout.png" />
+               </image>
+            </ImageView>
+            <JFXButton fx:id="btnLogout" alignment="CENTER_RIGHT" buttonType="RAISED" layoutX="1079.0" layoutY="131.0" onAction="#actLogout" prefHeight="50.0" prefWidth="174.0" text="LOGOUT" textFill="WHITE">
+               <font>
+                  <Font name="Copperplate Gothic Bold" size="21.0" />
+               </font>
+               <ripplerFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="#ff8080" />
+                        <Stop color="#ff8080" offset="0.007246376811594203" />
+                        <Stop color="#a0abeb" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </ripplerFill>
+            </JFXButton>
+            <Label fx:id="wellbl" alignment="CENTER" layoutX="452.0" layoutY="130.0" prefHeight="51.0" prefWidth="384.0" style="-fx-background-color: transparent;" text="Welcome" textFill="#fff8f8">
+               <font>
+                  <Font name="Book Antiqua Bold" size="40.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutY="190.0" prefHeight="645.0" prefWidth="325.0" style="-fx-background-color: #ffe8e8;">
+         <children>
+            <AnchorPane fx:id="ancHouseownerSidebar" layoutX="7.0" layoutY="71.0" prefHeight="556.0" prefWidth="313.0">
+               <children>
+                  <JFXButton fx:id="btnMenuViewWorkers_HO" buttonType="RAISED" layoutX="77.0" layoutY="117.0" onAction="#actMenuViewWorkers_HO" prefHeight="50.0" prefWidth="227.0" style="-fx-background-color: #e76666; -fx-background-radius: 5px;" text="View Workers" textFill="WHITE">
+                     <font>
+                        <Font name="Trebuchet MS" size="25.0" />
+                     </font>
+                     <ripplerFill>
+                        <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                           <stops>
+                              <Stop color="#eb7445" />
+                              <Stop color="#822121" offset="1.0" />
+                           </stops>
+                        </RadialGradient>
+                     </ripplerFill>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+                  <ImageView fitHeight="60.0" fitWidth="60.0" layoutX="14.0" layoutY="112.0" pickOnBounds="true" smooth="false">
+                     <image>
+                        <Image url="@images/icons8-crowd-100.png" />
+                     </image>
+                  </ImageView>
+                  <JFXButton fx:id="btnMenuHome_HO" buttonType="RAISED" layoutX="77.0" layoutY="41.0" onAction="#actMenuHome_HO" prefHeight="48.0" prefWidth="227.0" style="-fx-background-color: #e76666; -fx-background-radius: 5px;" text="Home" textFill="WHITE">
+                     <font>
+                        <Font name="Trebuchet MS" size="25.0" />
+                     </font>
+                     <ripplerFill>
+                        <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                           <stops>
+                              <Stop color="#eb7445" />
+                              <Stop color="#822121" offset="1.0" />
+                           </stops>
+                        </RadialGradient>
+                     </ripplerFill>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+                  <ImageView fitHeight="60.0" fitWidth="60.0" layoutX="14.0" layoutY="35.0" pickOnBounds="true" smooth="false">
+                     <image>
+                        <Image url="@images/icons8-home-page-100.png" />
+                     </image>
+                  </ImageView>
+                  <JFXButton fx:id="btnMenuMyReservation_HO" buttonType="RAISED" layoutX="77.0" layoutY="197.0" onAction="#actMenuMyReservation_HO" prefHeight="50.0" prefWidth="227.0" style="-fx-background-color: #e76666; -fx-background-radius: 5px;" text="My Reservation" textFill="WHITE">
+                     <font>
+                        <Font name="Trebuchet MS" size="25.0" />
+                     </font>
+                     <ripplerFill>
+                        <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                           <stops>
+                              <Stop color="#eb7445" />
+                              <Stop color="#822121" offset="1.0" />
+                           </stops>
+                        </RadialGradient>
+                     </ripplerFill>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+                  <ImageView fitHeight="60.0" fitWidth="60.0" layoutX="14.0" layoutY="192.0" pickOnBounds="true" smooth="false">
+                     <image>
+                        <Image url="@images/icons8-repository-100.png" />
+                     </image>
+                  </ImageView>
+                  <JFXButton fx:id="btnMenuMyProfile_HO" buttonType="RAISED" layoutX="77.0" layoutY="274.0" onAction="#actMenuMyProfile_HO" prefHeight="50.0" prefWidth="227.0" style="-fx-background-color: #e76666; -fx-background-radius: 5px;" text="My Profile" textFill="WHITE">
+                     <font>
+                        <Font name="Trebuchet MS" size="25.0" />
+                     </font>
+                     <ripplerFill>
+                        <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                           <stops>
+                              <Stop color="#eb7445" />
+                              <Stop color="#822121" offset="1.0" />
+                           </stops>
+                        </RadialGradient>
+                     </ripplerFill>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+                  <ImageView fitHeight="60.0" fitWidth="60.0" layoutX="14.0" layoutY="269.0" pickOnBounds="true" smooth="false">
+                     <image>
+                        <Image url="@images/icons8-user-100.png" />
+                     </image>
+                  </ImageView>
+                  <JFXButton fx:id="btnMenuChangePw_HO" buttonType="RAISED" layoutX="77.0" layoutY="349.0" onAction="#actMenuChangePw_HO" prefHeight="50.0" prefWidth="227.0" style="-fx-background-color: #e76666; -fx-background-radius: 5px;" text="Change Password" textFill="WHITE">
+                     <font>
+                        <Font name="Trebuchet MS" size="25.0" />
+                     </font>
+                     <ripplerFill>
+                        <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                           <stops>
+                              <Stop color="#eb7445" />
+                              <Stop color="#822121" offset="1.0" />
+                           </stops>
+                        </RadialGradient>
+                     </ripplerFill>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+                  <ImageView fitHeight="60.0" fitWidth="60.0" layoutX="14.0" layoutY="344.0" pickOnBounds="true" smooth="false">
+                     <image>
+                        <Image url="@images/icons8-lock-100.png" />
+                     </image>
+                  </ImageView>
+                  <JFXButton fx:id="btnMenuFeedback_Ho" buttonType="RAISED" layoutX="78.0" layoutY="422.0" onAction="#actMenuFeedback_Ho" prefHeight="50.0" prefWidth="227.0" style="-fx-background-color: #e76666; -fx-background-radius: 5px;" text="Feedback" textFill="WHITE">
+                     <font>
+                        <Font name="Trebuchet MS" size="25.0" />
+                     </font>
+                     <ripplerFill>
+                        <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                           <stops>
+                              <Stop color="#eb7445" />
+                              <Stop color="#822121" offset="1.0" />
+                           </stops>
+                        </RadialGradient>
+                     </ripplerFill>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+                  <ImageView fitHeight="60.0" fitWidth="60.0" layoutX="15.0" layoutY="417.0" pickOnBounds="true" smooth="false">
+                     <image>
+                        <Image url="@images/icons8-wechat-100.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <Label layoutX="126.0" layoutY="26.0" text="MENU">
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="#d30808" />
+                        <Stop color="#2007dd" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </Label>
+         </children></AnchorPane>
+	  <AnchorPane fx:id="ancHome_HO" layoutX="325.0" layoutY="190.0" prefHeight="645.0" prefWidth="975.0" style="-fx-background-color: white;">
+         <children>
+            <ImageView fitHeight="652.0" fitWidth="975.0" pickOnBounds="true">
+               <image>
+                  <Image url="@images/b3.jpg" />
+               </image>
+            </ImageView>
+            <Label alignment="CENTER" layoutX="130.0" layoutY="460.0" prefHeight="130.0" prefWidth="715.0" text="We Keep Your World Fresh! " textAlignment="CENTER" textFill="WHITE" wrapText="true">
+               <font>
+                  <Font name="Rage Italic" size="63.0" />
+               </font>
+            </Label>
+            <Label layoutX="498.0" layoutY="151.0" prefHeight="176.0" prefWidth="418.0" text="The Services On Your Fingertips!" textAlignment="CENTER" wrapText="true">
+               <font>
+                  <Font name="Pristina" size="52.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="WHITE" />
+                        <Stop color="#fff100" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </textFill></Label>
+         </children></AnchorPane>
+     <AnchorPane fx:id="ancMyReservation_HO" layoutX="325.0" layoutY="190.0" prefHeight="645.0" prefWidth="975.0" style="-fx-background-color: #d2e9ee;" visible="false">
+         <children>
+            <Label layoutX="320.0" layoutY="10.0" prefHeight="76.0" prefWidth="305.0" text="My Reservation" textFill="#0b6d7c" underline="true">
+               <font>
+                  <Font name="Rage Italic" size="49.0" />
+               </font>
+            </Label>
+            <TableView fx:id="tabMyReservation" layoutX="29.0" layoutY="106.0" onMouseClicked="#clickResRow" prefHeight="297.0" prefWidth="925.0" stylesheets="@table.css">
+               <columns>
+                  <TableColumn fx:id="colResID" prefWidth="68.0" text="Res_ID" />
+                  <TableColumn fx:id="colResWorkerName" minWidth="0.0" prefWidth="177.0" text="Worker_Name" />
+                  <TableColumn fx:id="colResDate" prefWidth="99.0" text="Res_Date" />
+                  <TableColumn fx:id="colResStartTime" prefWidth="89.0" text="Start_Time" />
+                  <TableColumn fx:id="colResEndTime" prefWidth="84.0" text="End_Time" />
+                  <TableColumn fx:id="colResDetails" prefWidth="251.0" text="Details" />
+                  <TableColumn fx:id="colResWorkerRemark" prefWidth="156.0" text="Worker_Remark" />
+               </columns>
+               <cursor>
+                  <Cursor fx:constant="OPEN_HAND" />
+               </cursor>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+            </TableView>
+            <AnchorPane layoutX="165.0" layoutY="526.0" prefHeight="98.0" prefWidth="615.0">
+               <children>
+                  <JFXButton fx:id="btnResSubmitReply" alignment="CENTER_RIGHT" buttonType="RAISED" disable="true" layoutX="79.0" layoutY="17.0" onAction="#actResSubmitReply" prefHeight="65.0" prefWidth="216.0" style="-fx-background-color: white; -fx-background-radius: 5px;" text="SEND-REPLY" textFill="#ed9918">
+                     <font>
+                        <Font name="Trebuchet MS Bold" size="23.0" />
+                     </font>
+                     <ripplerFill>
+                        <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                           <stops>
+                              <Stop color="#ebcb46" />
+                              <Stop color="#822121" offset="1.0" />
+                           </stops>
+                        </RadialGradient>
+                     </ripplerFill>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+                  <JFXButton fx:id="btnResCancel" alignment="CENTER_RIGHT" buttonType="RAISED" disable="true" layoutX="321.0" layoutY="17.0" onAction="#actResCancel" prefHeight="65.0" prefWidth="216.0" style="-fx-background-color: white; -fx-background-radius: 5px;" text="CANCEL" textFill="#8a53dd">
+                     <font>
+                        <Font name="Trebuchet MS Bold" size="23.0" />
+                     </font>
+                     <ripplerFill>
+                        <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                           <stops>
+                              <Stop color="#46bceb" />
+                              <Stop color="#5a2180" offset="1.0" />
+                           </stops>
+                        </RadialGradient>
+                     </ripplerFill>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+                  <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="358.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/Gif_Delete.gif" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="91.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/Gif_edit.gif" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="17.0" layoutY="410.0" prefHeight="105.0" prefWidth="942.0">
+               <children>
+                  <JFXTextArea fx:id="txtResMyReply" disable="true" focusColor="#009688" layoutX="619.0" layoutY="10.0" prefHeight="84.0" prefWidth="296.0" promptText="Enter Your Reply" unFocusColor="#4059a9">
+                     <font>
+                        <Font name="Candara" size="19.0" />
+                     </font></JFXTextArea>
+                  <JFXTextArea fx:id="txtResWorkerReply" editable="false" focusColor="#009688" layoutX="279.0" layoutY="10.0" prefHeight="84.0" prefWidth="296.0" promptText="Worker Reply" unFocusColor="#4059a9">
+                     <font>
+                        <Font name="Candara" size="19.0" />
+                     </font></JFXTextArea>
+                  <JFXTextField fx:id="txtResID" editable="false" focusColor="#009688" layoutX="46.0" layoutY="3.0" prefHeight="43.0" prefWidth="183.0" promptText="Reservation_ID" unFocusColor="#4059a9">
+                     <font>
+                        <Font name="Candara" size="19.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXTextField fx:id="txtResApplyDate" editable="false" focusColor="#009688" layoutX="46.0" layoutY="52.0" prefHeight="43.0" prefWidth="183.0" promptText="Submitted_Date" unFocusColor="#4059a9">
+                     <font>
+                        <Font name="Candara" size="19.0" />
+                     </font>
+                  </JFXTextField>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="ancMyProfile_HO" layoutX="325.0" layoutY="190.0" prefHeight="645.0" prefWidth="975.0" style="-fx-background-color: #d2e9ee;" visible="false">
+         <children>
+            <Label layoutX="380.0" prefHeight="76.0" prefWidth="216.0" text="My Profile" textFill="#0b6d7c" underline="true">
+               <font>
+                  <Font name="Rage Italic" size="49.0" />
+               </font>
+            </Label>
+            <JFXButton fx:id="btnMyprofileUpdate" buttonType="RAISED" layoutX="358.0" layoutY="540.0" onAction="#actMyprofileUpdate" prefHeight="59.0" prefWidth="261.0" style="-fx-background-color: #e76666; -fx-background-radius: 5px;" text="Update" textFill="WHITE">
+               <font>
+                  <Font name="Trebuchet MS" size="28.0" />
+               </font>
+               <ripplerFill>
+                  <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                     <stops>
+                        <Stop color="#eb7445" />
+                        <Stop color="#822121" offset="1.0" />
+                     </stops>
+                  </RadialGradient>
+               </ripplerFill>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+			<JFXTextField fx:id="txtLastname" focusColor="#048897" layoutX="666.0" layoutY="226.0" prefHeight="48.0" prefWidth="207.0" promptText="Your Lastname" unFocusColor="#1f367c">
+               <font>
+                  <Font name="Candara" size="22.0" />
+               </font>
+            </JFXTextField>
+             <JFXTextField fx:id="txtFirstname" focusColor="#048897" layoutX="445.0" layoutY="226.0" prefHeight="48.0" prefWidth="207.0" promptText="Your Firstname" unFocusColor="#1f367c">
+               <font>
+                  <Font name="Candara" size="22.0" />
+               </font>
+            </JFXTextField>
+            <JFXComboBox fx:id="cmbTitle" focusColor="#048897" layoutX="327.0" layoutY="226.0" prefHeight="48.0" prefWidth="102.0" promptText="Title" unFocusColor="#1f367c">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXComboBox>
+            <JFXTextField fx:id="txtHomeno" focusColor="#048897" layoutX="327.0" layoutY="349.0" prefHeight="48.0" prefWidth="545.0" promptText="Enter Your HomeNo" unFocusColor="#1f367c">
+               <font>
+                  <Font name="Candara" size="22.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="txtMobileno" focusColor="#048897" layoutX="327.0" layoutY="288.0" prefHeight="48.0" prefWidth="545.0" promptText="Enter Your MobileNo" unFocusColor="#1f367c">
+               <font>
+                  <Font name="Candara" size="22.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="txtUsername" disable="true" editable="false" focusColor="#048897" layoutX="325.0" layoutY="164.0" prefHeight="48.0" prefWidth="545.0" promptText="Your Username" unFocusColor="#1f367c">
+               <font>
+                  <Font name="Candara" size="22.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="txtAddress" focusColor="#048897" layoutX="327.0" layoutY="410.0" prefHeight="48.0" prefWidth="545.0" promptText="Enter Your Address" unFocusColor="#1f367c">
+               <font>
+                  <Font name="Candara" size="22.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="txtEmail" focusColor="#048897" layoutX="327.0" layoutY="470.0" prefHeight="48.0" prefWidth="545.0" promptText="Enter Your Email Address" unFocusColor="#1f367c">
+               <font>
+                  <Font name="Candara" size="22.0" />
+               </font>
+            </JFXTextField>
+            <Label layoutX="120.0" layoutY="164.0" prefHeight="48.0" prefWidth="174.0" text="Username :" textFill="#080865">
+               <font>
+                  <Font name="Cambria" size="23.0" />
+               </font>
+            </Label>
+            <Label layoutX="120.0" layoutY="410.0" prefHeight="48.0" prefWidth="174.0" text="Address     :" textFill="#080865">
+               <font>
+                  <Font name="Cambria" size="23.0" />
+               </font>
+            </Label>
+            <Label layoutX="120.0" layoutY="226.0" prefHeight="48.0" prefWidth="174.0" text="Fullname :" textFill="#080865">
+               <font>
+                  <Font name="Cambria" size="23.0" />
+               </font>
+            </Label>
+            <Label layoutX="120.0" layoutY="288.0" prefHeight="48.0" prefWidth="174.0" text="Mobile No  :" textFill="#080865">
+               <font>
+                  <Font name="Cambria" size="23.0" />
+               </font>
+            </Label>
+            <Label layoutX="120.0" layoutY="351.0" prefHeight="48.0" prefWidth="174.0" text="Home No   :" textFill="#080865">
+               <font>
+                  <Font name="Cambria" size="23.0" />
+               </font>
+            </Label>
+            <Label layoutX="120.0" layoutY="470.0" prefHeight="48.0" prefWidth="174.0" text="Email Address :" textFill="#080865">
+               <font>
+                  <Font name="Cambria" size="23.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="88.0" fitWidth="88.0" layoutX="444.0" layoutY="65.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/icons8-administrator-male-100.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="ancMenuChangePw_HO" layoutX="325.0" layoutY="190.0" prefHeight="645.0" prefWidth="975.0" style="-fx-background-color: #d2e9ee;" visible="false">
+         <children>
+            <Label layoutX="109.0" layoutY="178.0" prefHeight="48.0" prefWidth="216.0" text="Current Password :" textFill="#080865">
+               <font>
+                  <Font name="Cambria" size="23.0" />
+               </font>
+            </Label>
+            <JFXPasswordField fx:id="pwdCurrentPw" layoutX="367.0" layoutY="178.0" onMouseExited="#checkOldPwWithDb" prefHeight="48.0" prefWidth="445.0">
+               <font>
+                  <Font name="Candara" size="22.0" />
+               </font>
+            </JFXPasswordField>
+            <Label layoutX="109.0" layoutY="374.0" prefHeight="48.0" prefWidth="216.0" text="Confirm Password :" textFill="#080865">
+               <font>
+                  <Font name="Cambria" size="23.0" />
+               </font>
+            </Label>
+            <JFXPasswordField fx:id="pwdConfirmPw" disable="true" layoutX="367.0" layoutY="374.0" prefHeight="48.0" prefWidth="445.0">
+               <font>
+                  <Font name="Candara" size="22.0" />
+               </font>
+            </JFXPasswordField>
+            <Label layoutX="109.0" layoutY="283.0" prefHeight="48.0" prefWidth="216.0" text="New Password :" textFill="#080865">
+               <font>
+                  <Font name="Cambria" size="23.0" />
+               </font>
+            </Label>
+            <JFXPasswordField fx:id="pwdNewpw" disable="true" layoutX="367.0" layoutY="283.0" prefHeight="48.0" prefWidth="445.0">
+               <font>
+                  <Font name="Candara" size="22.0" />
+               </font>
+            </JFXPasswordField>
+            <JFXButton fx:id="btnChangwPwSubmit" buttonType="RAISED" disable="true" layoutX="335.0" layoutY="471.0" onAction="#actChangwPwSubmit" prefHeight="59.0" prefWidth="305.0" style="-fx-background-color: #1f367c; -fx-background-radius: 5px;" text="Submit" textFill="WHITE">
+               <font>
+                  <Font name="Trebuchet MS" size="28.0" />
+               </font>
+               <ripplerFill>
+                  <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                     <stops>
+                        <Stop color="#46d4eb" />
+                        <Stop color="#392180" offset="1.0" />
+                     </stops>
+                  </RadialGradient>
+               </ripplerFill>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <Label fx:id="lblAlertCurrentPw" layoutX="367.0" layoutY="238.0" prefHeight="36.0" prefWidth="445.0" textFill="#e11a1a">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblAlertMatchPw" alignment="CENTER" layoutX="61.0" layoutY="554.0" prefHeight="48.0" prefWidth="853.0" textFill="#e11a1a">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <Label layoutX="325.0" layoutY="14.0" prefHeight="76.0" prefWidth="325.0" text="Change Password" textFill="#0b6d7c" underline="true">
+               <font>
+                  <Font name="Rage Italic" size="49.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="88.0" fitWidth="88.0" layoutX="443.0" layoutY="88.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/icons8-password-100.png" />
+               </image>
+            </ImageView>
+         </children></AnchorPane>
+      <AnchorPane fx:id="ancFeedback_Ho" layoutX="325.0" layoutY="190.0" prefHeight="651.0" prefWidth="975.0" style="-fx-background-color: #d2e9ee;" visible="false">
+         <children>
+            <JFXTextField fx:id="txtFeedHoName" layoutX="392.0" layoutY="207.0" prefHeight="50.0" prefWidth="398.0">
+               <font>
+                  <Font name="Candara" size="19.0" />
+               </font>
+            </JFXTextField>
+            <TextArea fx:id="txtFeedMessage" layoutX="392.0" layoutY="322.0" prefHeight="123.0" prefWidth="398.0">
+               <font>
+                  <Font name="Candara" size="19.0" />
+               </font>
+            </TextArea>
+            <Label layoutX="185.0" layoutY="207.0" prefHeight="50.0" prefWidth="189.0" text="Name :">
+               <font>
+                  <Font name="Candara" size="28.0" />
+               </font>
+            </Label>
+            <Label layoutX="185.0" layoutY="321.0" prefHeight="50.0" prefWidth="189.0" text="Message :">
+               <font>
+                  <Font name="Candara" size="28.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="393.0" layoutY="21.0" prefHeight="50.0" prefWidth="189.0" text="Feedback">
+               <font>
+                  <Font name="Rage Italic" size="55.0" />
+               </font>
+            </Label>
+            <JFXButton fx:id="btnFeedbackSubmit_Ho" buttonType="RAISED" layoutX="402.0" layoutY="488.0" onAction="#actFeedbackSubmit_Ho" prefHeight="59.0" prefWidth="261.0" style="-fx-background-color: #1f367c; -fx-background-radius: 5px;" text="Submit" textFill="WHITE">
+               <font>
+                  <Font name="Trebuchet MS" size="28.0" />
+               </font>
+               <ripplerFill>
+                  <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                     <stops>
+                        <Stop color="#46d4eb" />
+                        <Stop color="#392180" offset="1.0" />
+                     </stops>
+                  </RadialGradient>
+               </ripplerFill>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <ImageView fitHeight="88.0" fitWidth="88.0" layoutX="444.0" layoutY="89.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/icons8-wechat-100.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
